@@ -12,7 +12,17 @@ public class BinarySearch extends Search {
 
         while(low <= high) {
             int mid = (low + high) / 2;
+            int current = arr[mid];
+
+            if(current == target) {
+                return mid;
+            } else if(current < target) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
         }
+        return -1;
     }
 
 }
