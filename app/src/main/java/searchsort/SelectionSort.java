@@ -7,7 +7,7 @@ public class SelectionSort {
     public static void sort(int[] arr) {
         for(int cur = 0; cur < arr.length - 1; cur++) {
             int min = findMin(arr, cur); //find min in current array
-            exch(arr, cur, min); //move to front 
+            Util.exch(arr, cur, min); //move to front 
         }
     }
 
@@ -20,11 +20,5 @@ public class SelectionSort {
         }
 
         return min;
-    }
-
-    public static void exch(int[] arr, int i, int j) {
-        int temp = arr[i]; 
-        arr[i] = arr[j];
-        arr[j] = temp;
     }
 }
