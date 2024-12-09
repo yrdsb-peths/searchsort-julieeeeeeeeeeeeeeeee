@@ -6,7 +6,8 @@ public class QuickSort extends Sort {
      */
     @Override
     public void sort(int[] arr) {
-        Util.shuffle(arr);
+        Long seed = 12345L;
+        Util.shuffle(arr, seed);
         quickSort(arr, 0, arr.length - 1);
     }
 
