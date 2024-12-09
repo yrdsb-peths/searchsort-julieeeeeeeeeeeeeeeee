@@ -2,17 +2,30 @@ package searchsort;
 
 import java.util.Random;
 
+/**
+ * Utility class for providing helper methods for search and sort algorithms.
+ */
 public class Util {
     /**
-     * Shuffle the elements in the array arr using Fisher-Yates shuffle algorithm.
+     * Shuffle the elements in the given array using Fisher-Yates shuffle algorithm.
+     * 
+     * Fisher-Yates Shuffle Algorithm:
+     * 1. Iterate over the array from the last element to the second element.
+     * 2. For each element at index i, generate a random index j (0 to i).
+     * 3. Swap the element at index i with the element at index j.
+     * 4. Continue until the entire array is shuffled.
+     * 
+     * @param arr  The array to be shuffled.
+     * @param seed The seed for the random number generator.
+     * 
+     * @return The shuffled array.
      */
     public static int[] shuffle(int[] arr, Long seed) {
         // Initialize a Random object with the given seed if provided
         Random random = (seed != null) ? new Random(seed) : new Random();
+        // Note: This generates a random number between 0 and 5:
+        // int randomNum = random.nextInt(6);
 
-        // Implement the Fisher-Yates shuffle algorithm
-        // To generate a random index between 0 and i (exclusive) use:
-        // random.nextInt(i)
         return arr;
     }
 
